@@ -31,7 +31,7 @@ public class CandidatureController {
         return cis.retrieveCandidatureById(idCandidature);
     }
 
-    @GetMapping("retrieveAllCandidature")
+    @GetMapping("retrieveAllCandidaturee")
     public List<Candidature> retrieveAllCandidature() {
         return cis.retrieveAllCandidature();
     }
