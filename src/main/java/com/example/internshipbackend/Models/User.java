@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -21,6 +23,8 @@ public class User {
     private String speciality;
     @Enumerated(EnumType.STRING)
     private RoleType roleType;
+    @OneToMany(mappedBy = "user")
+    private List<Candidature> candidatureList;
 }
 
 

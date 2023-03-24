@@ -1,15 +1,15 @@
 package com.example.internshipbackend.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.example.internshipbackend.Models.enumm.RoleType;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -20,5 +20,9 @@ public class CV {
     @Id
     private Long id;
     private String cvPdf;
+    @Enumerated(EnumType.STRING)
+    private RoleType roleType;
+    @OneToMany(mappedBy = "cv")
+    private List<Candidature>candidatureList;
 
 }

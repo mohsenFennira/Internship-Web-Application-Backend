@@ -1,12 +1,10 @@
 package com.example.internshipbackend.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Internship implements Serializable {
@@ -21,4 +19,7 @@ public class Internship implements Serializable {
     private Date dateInternshipEnd;
     private String SkillsTechnical;
     private String required;
+    @ManyToMany(mappedBy = "internshipList")
+    private List<Candidature>candidatures;
+
 }
