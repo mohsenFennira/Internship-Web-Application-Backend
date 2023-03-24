@@ -22,8 +22,7 @@ public class MotivationLetter {
     private Long id;
     private String description;
     private Date CreationDate;
-    @Enumerated(EnumType.STRING)
-    private CvType cvType;
+
     @OneToMany(mappedBy = "motivationLetter")
     private List<Candidature>candidatureList;
 

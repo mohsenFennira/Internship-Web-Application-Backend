@@ -1,5 +1,6 @@
 package com.example.internshipbackend.Models;
 
+import com.example.internshipbackend.Models.enumm.CvType;
 import com.example.internshipbackend.Models.enumm.RoleType;
 
 import lombok.AllArgsConstructor;
@@ -22,7 +23,7 @@ public class CV {
     private Long id;
     private String cvPdf;
     @Enumerated(EnumType.STRING)
-    private RoleType roleType;
+    private CvType cvType;
     @OneToMany(mappedBy = "cv")
     private List<Candidature>candidatureList;
 

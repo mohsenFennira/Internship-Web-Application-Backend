@@ -35,5 +35,9 @@ public class CandidatureController {
     public List<Candidature> retrieveAllCandidature() {
         return cis.retrieveAllCandidature();
     }
+    @PostMapping ("assignCandidaturetoInternshipandMotivationLetterAndCv")
+    public Candidature assignCandidaturetoInternshipandMotivationLetterAndCv(@RequestBody Candidature candidature,@RequestParam Long idMotivationLetter,@RequestParam Long idCV,@RequestParam Long idInternship) {
+        return cis.assignCandidaturetoInternshipandMotivationLetterAndCv(candidature,idMotivationLetter,idCV,idInternship);
+    }
 
-}
+    }
