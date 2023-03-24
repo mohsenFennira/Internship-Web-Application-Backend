@@ -1,11 +1,12 @@
 package com.example.internshipbackend.Models;
 
-import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class Candidature {
     @ManyToOne
     private User user;
     @ManyToMany
-    private List<Internship>internshipList;
+    private List<Internship> internshipList;
     @ManyToOne
     private MotivationLetter motivationLetter;
     @ManyToOne
